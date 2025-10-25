@@ -2,14 +2,14 @@
   font-family: "PT Sans";
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-weight: 400;
   src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT SansBold";
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-weight: 700;
   src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
 :root {
@@ -51,14 +51,15 @@ fieldset {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.main-nav {
-  background-color: azure;
+.site-list__item {
+  font-family: "PT SansBold";
+  font-weight: bold;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 18px;
 }
-.page-header {
-  background-color: --basic-sweet-grey;
-}
-.page__main {
-  background-color: --basic-sweet-grey;
+.advantages-wrapper {
+  background-color: var(--basic-blue);
 }
 
 /*# sourceMappingURL=style.css.map */
