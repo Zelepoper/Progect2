@@ -1,35 +1,110 @@
-# Личный проект «project» 
+# stylelint-config-htmlacademy
 
-* Студент: [userName](userProfile).
-* Наставник: `Неизвестно`.
+[![Test Status][test-image]][test-url]
+[![License: MIT][license-image]][license-url]
+[![NPM version][npm-image]][npm-url]
+[![Vulnerabilities count][vulnerabilities-image]][vulnerabilities-url]
 
----
+> Это стандартный конфигурационный файл для stylelint от [HTML Academy](https://htmlacademy.ru/).
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+Используйте его как есть или как основу для вашей собственной конфигурации.
 
-Полезный файл:
+## Установка
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+Вместе с конфигом установите и сам `stylelint`.
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+```sh
+npm i -D stylelint-config-htmlacademy stylelint
+```
 
----
+## Использование
 
-### Памятка
+В корне проекта создайте файл `.stylelintrc` и в нём добавьте `stylelint-config-htmlacademy` в поле `extends`.
 
-#### 1. Зарегистрируйтесь на Гитхабе
+_.stylelintrc_
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+```json
+{
+  "extends": "stylelint-config-htmlacademy"
+}
+```
 
+Если вы установили `stylelint-config-htmlacademy` глобально с помощью флага `-g`, тогда вам нужно использовать абсолютный путь `stylelint-config-htmlacademy` в конфигурационном файле:
 
-#### 2. Начинайте обучение!
+_.stylelintrc_
 
----
+```json
+{
+  "extends": "/absolute/path/to/stylelint-config-htmlacademy"
+}
+```
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
+## Расширение конфига
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+Вы можете переопределить существующие правила или добавить новые.
 
-[check-image]: https://github.com/htmlacademy-adaptive/{{userId}}-{{projectName}}/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-adaptive/{{userId}}-{{projectName}}/actions
+Для этого добавьте в конфиг поле `rules` с нужными вам переопределениями правил.
+
+_.stylelintrc_
+
+```json
+{
+  "extends": "stylelint-config-htmlacademy",
+  "rules": {
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ],
+    "unit-whitelist": ["em", "rem", "s", "px"]
+  }
+}
+```
+
+В этом же поле `rules` можно переопределять и больше не поддерживаемые самим Stylelint [стилистические правила](https://github.com/firefoxic/stylelint-codeguide/blob/main/docs/user-guide/rules.md#rules) из плагина `stylelint-codeguide`, добавив перед названием правила префикс `codeguide/`.
+
+_.stylelintrc_
+
+```json
+{
+  "extends": "stylelint-config-htmlacademy",
+  "rules": {
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ],
+    "unit-whitelist": ["em", "rem", "s", "px"],
+
+    "codeguide/indentation": "tab",
+    "codeguide/number-leading-zero": null
+  }
+}
+```
+
+## Использование в VSCode
+
+1. Установите стайллинт и конфиг
+2. Откройте VScode
+3. Установите плагин [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+4. Пользуйтесь
+
+![Несоответствия правилам конфига подчёркиваются красной волнистой линией, по наведению на которую появляется попап с описанием ошибки.](vscode-error.png)
+
+[test-url]: https://github.com/htmlacademy/stylelint-config-htmlacademy/actions
+[test-image]: https://github.com/htmlacademy/stylelint-config-htmlacademy/actions/workflows/test.yml/badge.svg?branch=main
+
+[npm-url]: https://npmjs.org/package/stylelint-config-htmlacademy
+[npm-image]: https://badge.fury.io/js/stylelint-config-htmlacademy.svg
+
+[license-url]: https://github.com/htmlacademy/stylelint-config-htmlacademy/blob/main/LICENSE
+[license-image]: https://img.shields.io/badge/License-MIT-limegreen.svg
+
+[vulnerabilities-url]: https://snyk.io/test/github/htmlacademy/stylelint-config-htmlacademy
+[vulnerabilities-image]: https://img.shields.io/snyk/vulnerabilities/npm/stylelint-config-htmlacademy
