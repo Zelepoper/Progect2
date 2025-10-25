@@ -1,1 +1,4 @@
 npm test
+#!/bin/sh
+# exit 1 will prevent commit to happen, so you can more easily debug things
+echo "it's working" && exit 1

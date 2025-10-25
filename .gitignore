@@ -5,3 +5,6 @@ node_modules/
 .DS_Store
 .publish
 Thumbs.db
+# В файле .gitignore:
+# Удалите строку `.husky` или добавьте:
+!.husky/
