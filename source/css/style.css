@@ -2,14 +2,14 @@
   font-family: "PT Sans";
   font-weight: normal;
   font-style: normal;
-  font-weight: 400;
+  font-display: swap;
   src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }
 @font-face {
   font-family: "PT SansBold";
   font-weight: bold;
   font-style: normal;
-  font-weight: 700;
+  font-display: swap;
   src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
 :root {
@@ -51,15 +51,53 @@ fieldset {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.site-list__item {
+.site-list__link {
   font-family: "PT SansBold";
   font-weight: bold;
   font-weight: 700;
   line-height: 40px;
   font-size: 18px;
+  padding: 0px;
+  list-style: none;
+}
+.page {
+  height: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  color: black;
+  text-transform: uppercase;
+}
+.page_main {
+  padding: 0px;
+  list-style: none;
 }
 .advantages-wrapper {
   background-color: var(--basic-blue);
+}
+.advantages__list {
+  list-style: none;
+  padding: 0px;
+}
+.form-review__item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.gallery__list {
+  padding: 0px;
+  list-style: none;
+}
+.footer {
+  background-color: aquamarine;
 }
 
 /*# sourceMappingURL=style.css.map */
