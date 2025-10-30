@@ -1,0 +1,32 @@
+.site-list__link {
+    font-family: "PT SansBold";
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0px;
+    list-style: none;
+    height: 55px;
+}
+
+
+@media (max-width: @mobile-width-only) {
+    .site-list__link:last-child {
+        height: 40px;
+    }
+}
+.site-list a {
+    position: relative;
+    display: block;
+    padding: 12px 21px;
+    padding-bottom: 13px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--basic-blue);
+    border-top: 1px solid #527a86;
+    border-bottom: 1px solid #527a86;
+    margin-left: -40px;
+}

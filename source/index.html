@@ -18,22 +18,6 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="main-nav__panel">
-      <a class="page--header__logo">
-        <img src="/source/img/logo.svg" width="186.6px" height="96.43px" alt="Город Седона">
-      </a>
-      <div class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <svg aria-hidden="true" width="23" height="22" viewBox="0 0 23 22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
-            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
-            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__link site-list__link--active">
@@ -53,16 +37,45 @@
         </li>
         <li class="site-list__link">
           <a href="#">
-            Контакты
-          </a>
-        </li>
-        <li class="site-list__link">
-          <a href="#">
             HTML Academy
           </a>
         </li>
       </ul>
     </div>
+        <div class="main-nav__panel">
+      <a class="page--header__logo">
+        <img src="/source/img/logo.svg" width="186.6px" height="96.43px" alt="Город Седона">
+      </a>
+      <div class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg aria-hidden="true" width="23" height="22" viewBox="0 0 23 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
+            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
+            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+  
+  navMain.classList.remove('main-nav--nojs');
+  
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
+
+
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Седона - сайт для туристов</h1>
