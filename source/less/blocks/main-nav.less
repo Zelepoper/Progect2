@@ -1,3 +1,29 @@
+.main-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--basic-blue);
+    color: #ffffff;
+}
+
+.main-nav__list {
+        @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 700px;
+    }
+}
+
+.main-nav__panel {
+    display: flex;
+    
+}
+
+.main-nav__toggle {
+    outline: 5px solid rgba(217, 253, 12, 0.8);
+    outline-offset: -5px;
+}
+
 .site-list__link {
     font-family: "PT SansBold";
     font-weight: bold;
