@@ -57,21 +57,44 @@ fieldset {
 .page--header__logo {
   margin-left: 43px;
 }
-@media (min-width: 767px) {
-  .page--header__logo {
-    background-color: #000000;
-    background-image: url("/source/img/logotype/logotype-mobile.svg.jpg");
-    background-repeat: no-repeat;
-  }
-}
-@media (min-width: 767px) and (min-resolution: 2dppx) {
+@media (min-resolution: 2dppx) {
   .page--header__logo {
     background-image: url("/source/img/logotype/logotype-mobile.svg@2x.jpg");
   }
 }
-@media (min-width: 767px) and (min-resolution: 3dppx) {
+@media (min-resolution: 3dppx) {
   .page--header__logo {
     background-image: url("/source/img/logotype/logotype-mobile.svg@3x.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-tablet.jpg");
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-tablet@2x.jpg");
+  }
+}
+@media (min-width: 768px) and (min-resolution: 3dppx) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-tablet@3x.jpg");
+  }
+}
+@media (min-width: 1280px) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-desktop.png");
+  }
+}
+@media (min-width: 1280px) and (min-resolution: 2dppx) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-desktop@2x.png");
+  }
+}
+@media (min-width: 1280px) and (min-resolution: 3dppx) {
+  .page--header__logo {
+    background-image: url("/source/img/logotype/logotype-desktop.@3x.png");
   }
 }
 .page {
