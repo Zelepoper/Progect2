@@ -4,8 +4,20 @@
 
 .page--header__logo {
     margin-left: 43px;
-    outline: 5px solid rgba(0, 255, 0, 0.8);
-    outline-offset: -5px;
-    width: 101.7px;
-    height: 84px;  
+}
+
+@media (min-width: @mobile-width-only) {
+    .page--header__logo {
+        background-color: #000000;
+        background-image: url("/source/img/logotype/logotype-mobile.svg.jpg");
+        background-repeat: no-repeat;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("/source/img/logotype/logotype-mobile.svg@2x.jpg");
+        }
+
+        @media (min-resolution: 3dppx) {
+            background-image: url("/source/img/logotype/logotype-mobile.svg@3x.jpg");
+        }
+    }
 }

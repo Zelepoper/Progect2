@@ -166,7 +166,7 @@ fieldset {
 }
 @media (max-width: 767px) {
   .site-list__link:last-child {
-    height: 40px;
+    height: 55px;
   }
 }
 .site-list a {

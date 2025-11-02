@@ -42,9 +42,14 @@
         </li>
       </ul>
     </div>
-        <div class="main-nav__panel">
+    <div class="main-nav__panel">
       <a class="page--header__logo">
-        <img src="/source/img/logo.svg" width="186.6px" height="96.43px" alt="Город Седона">
+        <picture>
+          <source media="(min-width: 767px)" srcset="/source/img/logotype/logotype-mobile.svg.jpg">
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="/source/img/logotype/logotype-mobile.svg.jpg" width="101.7px" height="84px" alt="Город Седона">
+        </picture>
       </a>
       <div class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -58,22 +63,22 @@
         </button>
       </div>
     </div>
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-  
-  navMain.classList.remove('main-nav--nojs');
-  
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
 
   </header>
