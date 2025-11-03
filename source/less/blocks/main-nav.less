@@ -36,10 +36,9 @@
     align-items: center;
     justify-items: center;
     position: relative;
-    z-index: 2;
-    /* .main-nav__panel будет выше */
+    z-index: 3;
     background-color: #ffffff;
-    margin-top: -2px;
+    margin-top: -11px;
 }
 
 @media (min-wight: @mobile-width-only) {
@@ -49,37 +48,72 @@
 }
 
 
+
+/* Стили для гамбургер-меню (три линии) */
 .main-nav__toggle {
-    margin-right: 17px;
+    position: relative;
+    width: 27px;
+    height: 20px;
+    margin-right: 29px;
+    margin-bottom: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.main-nav--opened .main-nav__toggle {
-    top: 0;
-    right: auto;
+.main-nav__toggle::before,
+.main-nav__toggle::after,
+.main-nav__toggle span {
+    content: "";
+    position: absolute;
     left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    margin-top: -221px;
+    margin-left: 5px;
+}
 
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 284px;
-        right: 16.8px;
-        width: 27px;
-        height: 4px;
-        background-color: #ffffff;
-    }
+.main-nav__toggle::before {
+    top: 0;
+}
 
-    &::before {
-        transform: rotate(42deg);
-        box-shadow: none;
-    }
+.main-nav__toggle::after {
+    bottom: 0;
+}
 
-    &::after {
-        transform: rotate(-42deg);
-    }
+.main-nav__toggle span {
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-    &:active::before,
-    &:active::after {
-        background-color: fade(#ffffff, 30%);
-    }
+/* Стили для крестика (при открытом меню) */
+.main-nav--opened .main-nav__toggle {
+    position: relative;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.main-nav--opened .main-nav__toggle::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.main-nav--opened .main-nav__toggle span {
+    opacity: 0;
+}
+
+/* Скрываем меню по умолчанию */
+.main-nav__wrapper {
+    display: none;
+    /* Дополнительные стили, если нужны */
+}
+
+/* Показываем меню, когда класс .main-nav--opened добавлен */
+.main-nav--opened .main-nav__wrapper {
+    display: block;
 }

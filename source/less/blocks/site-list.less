@@ -13,6 +13,9 @@
 @media (max-width: @mobile-width-only) {
     .site-list__link:last-child {
         height: 55px;
+        /* Чтобы тень отображалась поверх других элементов */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        /* Тень */
     }
 }
 
@@ -28,8 +31,6 @@
     text-decoration: none;
     background-color: var(--basic-blue);
     border-top: 1px solid #527a86;
-    border-bottom: 1px solid #527a86;
+    border-bottom: 0.5px solid #5f8591;
     margin-left: -40px;
-    
 }
-

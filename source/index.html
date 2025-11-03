@@ -17,86 +17,75 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__link site-list__link--active">
-          <a>
-            Главная
-          </a>
-        </li>
-        <li class="site-list__link">
-          <a href="foto.html">
-            Фото и видео
-          </a>
-        </li>
-        <li class="site-list__link">
-          <a href="form.html">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="site-list__link">
-          <a href="#">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-nav__panel">
-      <a class="page--header__logo">
-        <picture class="page--header__logo">
-          <source media="(min-width: 1200px)" srcset="
+  <nav class="main-nav">
+    <header class="page-header">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__link site-list__link--active">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="site-list__link">
+            <a href="foto.html">
+              Фото и видео
+            </a>
+          </li>
+          <li class="site-list__link">
+            <a href="form.html">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="site-list__link">
+            <a href="#">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="main-nav__panel">
+    <a class="page--header__logo">
+      <picture class="page--header__logo">
+        <source media="(min-width: 1200px)" srcset="
       /source/img/logotype/logotype-desktop.png 1x,
       /source/img/logotype/logotype-desktop@2x.png 2x,
       /source/img/logotype/logotype-desktop@3x.png 3x
     ">
-          <source media="(min-width: 768px)" srcset="
-      /source/img/logotype/logotype-tablet.jpg 1x,
-      /source/img/logotype/logotype-tablet@2x.jpg 2x,
-      /source/img/logotype/logotype-tablet@3x.jpg 3x
+        <source media="(min-width: 768px)" srcset="
+      /source/img/logotype/logotype-tablet.png 1x,
+      /source/img/logotype/logotype-tablet@2x.png 2x,
+      /source/img/logotype/logotype-tablet@3x.png 3x
     ">
-          <img src="/source/img/logotype/logotype-mobile.svg.jpg" srcset="
-      /source/img/logotype/logotype-mobile.svg.jpg 1x,
-      /source/img/logotype/logotype-mobile.svg@2x.jpg 2x,
-      /source/img/logotype/logotype-mobile.svg@3x.jpg 3x
+        <img src="/source/img/logotype/logotype-mobile.svg.jpg" srcset="
+      /source/img/logotype/logotype-mobile.png 1x,
+      /source/img/logotype/logotype-tablet@2x.png 2x,
+      /source/img/logotype/logotype-mobile@3x.png 3x
     " width="102" height="84" alt="Город Седона">
-        </picture>
-
-      </a>
-      <div class="main-nav main-nav--opened main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <svg aria-hidden="true" width="23" height="22" viewBox="0 0 23 22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
-            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
-            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
-          </svg>
-        </button>
-      </div>
+      </picture>
+    </a>
+    <div class="main-nav main-nav--opened main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <svg aria-hidden="true" width="23" height="22" viewBox="0 0 23 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2" />
+          <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2" />
+          <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2" />
+        </svg>
+      </button>
     </div>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-
-
+  </div>
+  <script>
+    document.querySelector('.main-nav__toggle').addEventListener('click', function () {
+      const mainNav = document.querySelector('.main-nav');
+      mainNav.classList.toggle('main-nav--opened');
+    });
+  </script>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Седона - сайт для туристов</h1>
-    <img src="/source/img/mobile/back-mobile.jpg" width="901px" height="389px" alt="Седона">
+    <img class="background" src="/source/img/mobile/back-mobile.jpg" width="901px" height="389px" alt="Седона">
     <section class="advantages">
       <h2 class="visually-hidden">Наши приемущества</h2>
       <p class="advantages-slogan">Седона-небольшой городок в Аризоне,<br> заслуживающий большего!</p>
