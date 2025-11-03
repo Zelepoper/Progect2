@@ -4,8 +4,9 @@
     background-color: var(--basic-blue);
     color: #ffffff;
     text-align: center;
-       position: relative;
-    z-index: 1; /* .main-nav__list будет ниже */
+    position: relative;
+    z-index: 1;
+    /* .main-nav__list будет ниже */
 }
 
 @media (min-wigth: @mobile-width-only) {
@@ -34,9 +35,11 @@
     grid-template-columns: 1fr 43px;
     align-items: center;
     justify-items: center;
-        position: relative;
-    z-index: 2; /* .main-nav__panel будет выше */
+    position: relative;
+    z-index: 2;
+    /* .main-nav__panel будет выше */
     background-color: #ffffff;
+    margin-top: -2px;
 }
 
 @media (min-wight: @mobile-width-only) {
@@ -59,7 +62,7 @@
     &::after {
         content: "";
         position: absolute;
-        top: 26px;
+        bottom: 284px;
         right: 16.8px;
         width: 27px;
         height: 4px;
