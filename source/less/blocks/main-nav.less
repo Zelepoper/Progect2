@@ -1,11 +1,13 @@
 .main-nav__wrapper {
-    margin-top: -14px;
+    margin-top: 0px;
     padding: 0px;
+    margin: -14px;
     background-color: var(--basic-blue);
     color: #ffffff;
     text-align: center;
     position: relative;
     z-index: 1;
+    margin-bottom: -11px;
     /* .main-nav__list будет ниже */
 }
 
@@ -27,10 +29,12 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         width: 768px;
+
     }
 }
 
 .main-nav__panel {
+    height: 56px;
     display: grid;
     grid-template-columns: 1fr 43px;
     align-items: center;
@@ -38,7 +42,6 @@
     position: relative;
     z-index: 3;
     background-color: #ffffff;
-    margin-top: -11px;
 }
 
 @media (min-wight: @mobile-width-only) {
@@ -47,18 +50,17 @@
     }
 }
 
-
-
 /* Стили для гамбургер-меню (три линии) */
 .main-nav__toggle {
     position: relative;
     width: 27px;
     height: 20px;
     margin-right: 29px;
-    margin-bottom: 38px;
+    margin-top: 3px;
     background: none;
     border: none;
     cursor: pointer;
+
 }
 
 .main-nav__toggle::before,

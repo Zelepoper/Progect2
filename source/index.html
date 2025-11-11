@@ -45,25 +45,7 @@
       </div>
   </nav>
   <div class="main-nav__panel">
-    <a class="page--header__logo">
-      <picture class="page--header__logo">
-        <source media="(min-width: 1200px)" srcset="
-      /source/img/logotype/logotype-desktop.png 1x,
-      /source/img/logotype/logotype-desktop@2x.png 2x,
-      /source/img/logotype/logotype-desktop@3x.png 3x
-    ">
-        <source media="(min-width: 768px)" srcset="
-      /source/img/logotype/logotype-tablet.png 1x,
-      /source/img/logotype/logotype-tablet@2x.png 2x,
-      /source/img/logotype/logotype-tablet@3x.png 3x
-    ">
-        <img src="/source/img/logotype/logotype-mobile.svg.jpg" srcset="
-      /source/img/logotype/logotype-mobile.png 1x,
-      /source/img/logotype/logotype-tablet@2x.png 2x,
-      /source/img/logotype/logotype-mobile@3x.png 3x
-    " width="102" height="84" alt="Город Седона">
-      </picture>
-    </a>
+    <a class="page--header__logo" aria-label="Город Седона"></a>
     <div class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -85,7 +67,10 @@
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Седона - сайт для туристов</h1>
-    <img class="background" src="/source/img/mobile/back-mobile.jpg" width="901px" height="389px" alt="Седона">
+    <div class="page-header__main-image page-header__main-image--index">
+      <img class="page-header__welcome-title" src="img/background-header/text-index.svg" width="282" height="214"
+        alt="Надпись Добро пожаловать">
+    </div>
     <section class="advantages">
       <h2 class="visually-hidden">Наши приемущества</h2>
       <p class="advantages-slogan">Седона-небольшой городок в Аризоне,<br> заслуживающий большего!</p>

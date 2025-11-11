@@ -1,8 +1,24 @@
-.page-header {
-        z-index: 5;
+.page-header__main-image {
+    position: relative;
+    height: 299px;
+    background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 100%;
+    background-size: 1200px 57px, cover;
+    padding-top: 90px;
+    text-align: center;
 }
 
-.page--header__logo {
-    margin-left: 21px;
-    display: block;
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .page-header__main-image {
+        background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile@2x.jpg");
+    }
+}
+ @media (-webkit-min-device-pixel-ratio: 3),
+(min-resolution: 3dppx) {
+    .page-header__main-image {
+        background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile@3x.jpg");
+    }   
 }

@@ -1,0 +1,78 @@
+.page--header__logo {
+    display: block;
+    margin-left: 42px;
+    width: 102px;
+    height: 84px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
+    margin-bottom: -26px;
+    /* Фон для мобильных устройств */
+    --logo-mobile: url("/source/img/logotype/logotype-mobile.png");
+    --logo-mobile-2x: url("/source/img/logotype/logotype-mobile@2x.png");
+    --logo-mobile-3x: url("/source/img/logotype/logotype-mobile@3x.png");
+
+    /* Фон для планшетов */
+    --logo-tablet: url("/source/img/logotype/logotype-tablet.png");
+    --logo-tablet-2x: url("/source/img/logotype/logotype-tablet@2x.png");
+    --logo-tablet-3x: url("/source/img/logotype/logotype-tablet@3x.png");
+
+    /* Фон для десктопов */
+    --logo-desktop: url("/source/img/logotype/logotype-desktop.png");
+    --logo-desktop-2x: url("/source/img/logotype/logotype-desktop@2x.png");
+    --logo-desktop-3x: url("/source/img/logotype/logotype-desktop@3x.png");
+
+    /* Фон по умолчанию (мобильный) */
+    background-image: var(--logo-mobile);
+}
+
+/* Retina для мобильных */
+@media (min-resolution: 2dppx) {
+    .page--header__logo {
+        background-image: var(--logo-mobile-2x);
+    }
+}
+
+@media (min-resolution: 3dppx) {
+    .page--header__logo {
+        background-image: var(--logo-mobile-3x);
+    }
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+    .page--header__logo {
+        background-image: var(--logo-tablet);
+    }
+
+    @media (min-resolution: 2dppx) {
+        .page--header__logo {
+            background-image: var(--logo-tablet-2x);
+        }
+    }
+
+    @media (min-resolution: 3dppx) {
+        .page--header__logo {
+            background-image: var(--logo-tablet-3x);
+        }
+    }
+}
+
+/* Десктопы */
+@media (min-width: 1200px) {
+    .page--header__logo {
+        background-image: var(--logo-desktop);
+    }
+
+    @media (min-resolution: 2dppx) {
+        .page--header__logo {
+            background-image: var(--logo-desktop-2x);
+        }
+    }
+
+    @media (min-resolution: 3dppx) {
+        .page--header__logo {
+            background-image: var(--logo-desktop-3x);
+        }
+    }
+}

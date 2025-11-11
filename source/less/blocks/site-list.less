@@ -7,22 +7,18 @@
     padding: 0 0px;
     list-style: none;
     height: 55px;
-    }
-
+}
 
 @media (max-width: @mobile-width-only) {
-    .site-list__link:last-child {
-        height: 55px;
-        /* Чтобы тень отображалась поверх других элементов */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        /* Тень */
+    .site-list__link:last-child a {
+        box-shadow: inset 0 -22px 7px -7px rgba(0, 0, 0, 0.2);
     }
 }
 
 .site-list a {
     position: relative;
     display: block;
-    padding: 12px 21px;
+    padding: 11px 21px;
     padding-bottom: 13px;
     font-size: 18px;
     line-height: 40px;
@@ -30,7 +26,7 @@
     text-transform: uppercase;
     text-decoration: none;
     background-color: var(--basic-blue);
-    border-top: 1px solid #527a86;
-    border-bottom: 0.5px solid #5f8591;
+    border-top: 1px solid rgba(29, 26, 26, 0.2);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     margin-left: -40px;
 }

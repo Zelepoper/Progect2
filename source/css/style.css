@@ -51,12 +51,93 @@ fieldset {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.page-header {
-  z-index: 5;
-}
 .page--header__logo {
-  margin-left: 21px;
   display: block;
+  margin-left: 42px;
+  width: 102px;
+  height: 84px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+  margin-bottom: -26px;
+  /* Фон для мобильных устройств */
+  --logo-mobile: url("/source/img/logotype/logotype-mobile.png");
+  --logo-mobile-2x: url("/source/img/logotype/logotype-mobile@2x.png");
+  --logo-mobile-3x: url("/source/img/logotype/logotype-mobile@3x.png");
+  /* Фон для планшетов */
+  --logo-tablet: url("/source/img/logotype/logotype-tablet.png");
+  --logo-tablet-2x: url("/source/img/logotype/logotype-tablet@2x.png");
+  --logo-tablet-3x: url("/source/img/logotype/logotype-tablet@3x.png");
+  /* Фон для десктопов */
+  --logo-desktop: url("/source/img/logotype/logotype-desktop.png");
+  --logo-desktop-2x: url("/source/img/logotype/logotype-desktop@2x.png");
+  --logo-desktop-3x: url("/source/img/logotype/logotype-desktop@3x.png");
+  /* Фон по умолчанию (мобильный) */
+  background-image: var(--logo-mobile);
+}
+/* Retina для мобильных */
+@media (min-resolution: 2dppx) {
+  .page--header__logo {
+    background-image: var(--logo-mobile-2x);
+  }
+}
+@media (min-resolution: 3dppx) {
+  .page--header__logo {
+    background-image: var(--logo-mobile-3x);
+  }
+}
+/* Планшеты */
+@media (min-width: 768px) {
+  .page--header__logo {
+    background-image: var(--logo-tablet);
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .page--header__logo {
+    background-image: var(--logo-tablet-2x);
+  }
+}
+@media (min-width: 768px) and (min-resolution: 3dppx) {
+  .page--header__logo {
+    background-image: var(--logo-tablet-3x);
+  }
+}
+/* Десктопы */
+@media (min-width: 1200px) {
+  .page--header__logo {
+    background-image: var(--logo-desktop);
+  }
+}
+@media (min-width: 1200px) and (min-resolution: 2dppx) {
+  .page--header__logo {
+    background-image: var(--logo-desktop-2x);
+  }
+}
+@media (min-width: 1200px) and (min-resolution: 3dppx) {
+  .page--header__logo {
+    background-image: var(--logo-desktop-3x);
+  }
+}
+.page-header__main-image {
+  position: relative;
+  height: 299px;
+  background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-size: 1200px 57px, cover;
+  padding-top: 90px;
+  text-align: center;
+}
+@media (min-resolution: 2dppx) {
+  .page-header__main-image {
+    background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile@2x.jpg");
+  }
+}
+@media (min-resolution: 3dppx) {
+  .page-header__main-image {
+    background-image: url("/source/img/background-header/intro-triangle.svg"), url("/source/img/background-header/back-mobile@3x.jpg");
+  }
 }
 .page {
   height: 100%;
@@ -79,16 +160,19 @@ fieldset {
   list-style: none;
 }
 .background {
-  margin-top: 30px;
+  position: relative;
+  z-index: -5;
 }
 .main-nav__wrapper {
-  margin-top: -14px;
+  margin-top: 0px;
   padding: 0px;
+  margin: -14px;
   background-color: var(--basic-blue);
   color: #ffffff;
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-bottom: -11px;
   /* .main-nav__list будет ниже */
 }
 @media (min-wigth: 767px) {
@@ -111,6 +195,7 @@ fieldset {
   }
 }
 .main-nav__panel {
+  height: 56px;
   display: grid;
   grid-template-columns: 1fr 43px;
   align-items: center;
@@ -118,7 +203,6 @@ fieldset {
   position: relative;
   z-index: 3;
   background-color: #ffffff;
-  margin-top: -11px;
 }
 @media (min-wight: 767px) {
   .main-nav__panel {
@@ -131,7 +215,7 @@ fieldset {
   width: 27px;
   height: 20px;
   margin-right: 29px;
-  margin-bottom: 38px;
+  margin-top: 3px;
   background: none;
   border: none;
   cursor: pointer;
@@ -194,17 +278,14 @@ fieldset {
   height: 55px;
 }
 @media (max-width: 767px) {
-  .site-list__link:last-child {
-    height: 55px;
-    /* Чтобы тень отображалась поверх других элементов */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    /* Тень */
+  .site-list__link:last-child a {
+    box-shadow: inset 0 -22px 7px -7px rgba(0, 0, 0, 0.2);
   }
 }
 .site-list a {
   position: relative;
   display: block;
-  padding: 12px 21px;
+  padding: 11px 21px;
   padding-bottom: 13px;
   font-size: 18px;
   line-height: 40px;
@@ -212,8 +293,8 @@ fieldset {
   text-transform: uppercase;
   text-decoration: none;
   background-color: var(--basic-blue);
-  border-top: 1px solid #527a86;
-  border-bottom: 0.5px solid #5f8591;
+  border-top: 1px solid rgba(29, 26, 26, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
   margin-left: -40px;
 }
 .advantages-wrapper {
