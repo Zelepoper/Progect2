@@ -173,7 +173,6 @@ fieldset {
   position: relative;
   z-index: 1;
   margin-bottom: -11px;
-  /* .main-nav__list будет ниже */
 }
 @media (min-wigth: 767px) {
   .main-nav__wrapper::after {
@@ -299,10 +298,52 @@ fieldset {
 }
 .advantages-wrapper {
   background-color: var(--basic-blue);
+  text-align: center;
+  color: var(--basic-white);
 }
 .advantages__list {
   list-style: none;
   padding: 0px;
+}
+.advantages-slogan {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 30px;
+  padding-left: 4px;
+  padding-right: 8px;
+  max-width: 484px;
+}
+.advantages__text {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 26px;
+  padding-bottom: 18px;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 1px;
+  max-width: 520px;
+}
+.advantages__overlay {
+  margin-top: -23px;
+}
+.advantages__description {
+  padding-top: -15px;
+}
+.home {
+  width: 520px;
+  height: 260px;
+  padding-top: 25px;
+  margin-bottom: -6px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.advantages__title {
+  padding-top: 15px;
 }
 .form-review__item ul {
   padding: 0;
