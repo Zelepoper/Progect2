@@ -300,6 +300,14 @@ fieldset {
   background-color: var(--basic-blue);
   text-align: center;
   color: var(--basic-white);
+  height: 205px;
+}
+.advantages__item {
+  display: grid;
+  padding-top: 0;
+  background-color: #eeeeee;
+  counter-increment: advantages;
+  position: relative;
 }
 .advantages__list {
   list-style: none;
@@ -332,18 +340,163 @@ fieldset {
   margin-top: -23px;
 }
 .advantages__description {
-  padding-top: -15px;
+  position: relative;
+  bottom: 2px;
+  left: -3px;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 5px;
 }
-.home {
-  width: 520px;
+.advantages__description p {
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.advantages__item--home::after {
+  display: block;
+  content: "";
+  width: 100%;
   height: 260px;
-  padding-top: 25px;
-  margin-bottom: -6px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  grid-column: span 2;
+}
+.advantages__item--home:nth-of-type(1)::after {
+  background-image: url("../img/home.jpg");
+}
+@media (min-resolution: 2dppx) {
+  .advantages__item--home:nth-of-type(1)::after {
+    background-image: url("../img/home@2x.jpg");
+  }
+}
+.advantages__item--bridge::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 260px;
+  margin-bottom: 27px;
+  margin-top: -13px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  grid-column: span 2;
+}
+.advantages__item--bridge::after {
+  background-image: url("../img/photo-bridge-desktop.jpg");
+}
+.advantages__item--bridge::after {
+  background-image: url("../img/photo-bridge-desktop@2x.jpg");
 }
 .advantages__title {
-  padding-top: 15px;
+  position: static;
+  padding-top: 12px;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+.advantages__number {
+  position: relative;
+  top: -5px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.advantages__bridge {
+  padding-top: 27px;
+}
+.advantages__item--fon:nth-of-type(1)::after {
+  background-image: url("../img/photo-bridge-desktop.jpg");
+}
+@media (min-resolution: 2dppx) {
+  .advantages__item--fon:nth-of-type(1)::after {
+    background-image: url("../img/photo-bridge-desktop@2x.jpg");
+  }
+}
+.advantages-wrapper--bridge p {
+  padding-bottom: 11px;
+  margin-top: -6px;
+}
+.advantages-wrapper--bridge h3 {
+  margin-top: 28px;
+}
+.advantages__item {
+  text-align: center;
+  border-bottom: 1px solid #D6D6D6;
+}
+.advantages__item:last-child {
+  border: none;
+}
+.advantages__item--numbers {
+  height: 167px;
+}
+.advantages__title--numbers {
+  margin-top: 28px;
+}
+.advantages__number--numbers {
+  margin-top: -14px;
+}
+.advantages__description--numbers {
+  padding-bottom: 12px;
+  margin-top: -13px;
+}
+.city-advantages {
+  position: relative;
+  max-width: 218px;
+  left: 69px;
+  margin-top: 35px;
+}
+.city-advantages__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: -29px;
+}
+.city-advantages__items {
+  margin-bottom: -16px;
+  position: relative;
+}
+.city-advantages__items::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.city-advantages__item--lodging::before {
+  width: 39px;
+  height: 36.83px;
+  left: -48px;
+  top: -11px;
+  background-image: url("../img/SVG/icon-house.svg");
+}
+.city-advantages__item--souvenir::before {
+  width: 32px;
+  height: 38px;
+  left: -44px;
+  top: -12px;
+  background-image: url("../img/SVG/icon-gift.svg");
+}
+.city-advantages__item--food::before {
+  width: 40px;
+  height: 34.9px;
+  left: -51px;
+  top: -5px;
+  background-image: url("../img/SVG/icon-burger.svg");
+}
+.city-advantages__title {
+  position: static;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 27px;
+}
+.city-advantages__text {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  bottom: 10px;
+  left: 1px;
 }
 .form-review__item ul {
   padding: 0;
