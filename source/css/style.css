@@ -301,6 +301,7 @@ fieldset {
   text-align: center;
   color: var(--basic-white);
   height: 205px;
+  max-width: 767px;
 }
 .advantages__item {
   display: grid;
@@ -314,7 +315,7 @@ fieldset {
   padding: 0px;
 }
 .advantages-slogan {
-  font-weight: bold;
+  font-family: "PT SansBold";
   font-size: 18px;
   line-height: 26px;
   text-align: center;
@@ -391,8 +392,9 @@ fieldset {
 }
 .advantages__title {
   position: static;
+  font-family: "PT SansBold";
+  font-size: 18px;
   padding-top: 12px;
-  letter-spacing: 1px;
   line-height: 26px;
 }
 .advantages__number {
@@ -428,16 +430,21 @@ fieldset {
 }
 .advantages__item--numbers {
   height: 167px;
+  padding: 0px 32px;
 }
 .advantages__title--numbers {
+  font-family: "PT SansBold";
+  font-size: 18px;
   margin-top: 28px;
+  margin-bottom: 13px;
 }
 .advantages__number--numbers {
   margin-top: -14px;
 }
 .advantages__description--numbers {
+  line-height: 21px;
   padding-bottom: 12px;
-  margin-top: -13px;
+  margin-top: -10px;
 }
 .city-advantages {
   position: relative;
@@ -484,7 +491,7 @@ fieldset {
 }
 .city-advantages__title {
   position: static;
-  font-weight: bold;
+  font-family: "PT SansBold";
   font-size: 18px;
   line-height: 26px;
   color: #000000;
@@ -507,8 +514,78 @@ fieldset {
   padding: 0px;
   list-style: none;
 }
-.footer {
-  background-color: aquamarine;
+.search {
+  text-align: center;
+}
+.search__title {
+  font-family: "PT SansBold";
+  font-size: 21px;
+  line-height: 26px;
+  padding-top: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+.serch__description {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 261px;
+  margin-left: 30px;
+}
+.search__button {
+  font-family: "PT SansBold";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #FFFFFF;
+  width: 280px;
+  height: 58px;
+  background-color: #81B3D2;
+  border: none;
+  margin-top: 13px;
+}
+.search__map {
+  text-align: center;
+  padding-top: 49px;
+  width: 320px;
+}
+.page-footer {
+  text-align: center;
+}
+.page-footer__item {
+  font-family: "PT SansBold";
+  font-size: 21px;
+  line-height: 26px;
+  margin-top: 33px;
+  margin-left: 1px;
+  margin-right: 2px;
+  margin-bottom: 33px;
+}
+.social__list {
+  display: flex;
+  gap: 6px;
+  margin-right: 49px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+.social__item {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-blue);
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: -7px;
+}
+.copyright__link {
+  margin-top: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */
