@@ -23,6 +23,9 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
       csso()
     ]))
     .pipe(rename("style.min.css"))
@@ -44,9 +47,12 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/*.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
-    .pipe(rename("script.min.js"))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -58,8 +64,8 @@ exports.scripts = scripts;
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.mozjpeg({progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
@@ -78,7 +84,7 @@ exports.images = copyImages;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"))
 }
 
@@ -125,7 +131,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -146,9 +152,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 // Build

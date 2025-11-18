@@ -1,4 +1,5 @@
 {
+  "name": "sedona-22",
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
