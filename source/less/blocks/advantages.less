@@ -1,179 +1,200 @@
 .advantages-wrapper {
-    background-color: var(--basic-blue);
-    text-align: center;
-    color: var(--basic-white);
-    height: 205px;
-    max-width: 767px;
+  background-color: var(--basic-blue);
+  text-align: center;
+  color: var(--basic-white);
+  height: 205px;
+  margin-bottom: -13px;
 }
 
 .advantages__item {
-    display: grid;
-    padding-top: 0;
-    background-color: #eeeeee;
-    counter-increment: advantages;
-    position: relative;
+  padding-top: 0;
+  background-color: #eeeeee;
+  counter-increment: advantages;
+  position: relative;
 }
 
 .advantages__list {
-    list-style: none;
-    padding: 0px;
+  list-style: none;
+  padding: 0px;
 }
 
 .advantages-slogan {
-    font-family: "PT SansBold";
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0 auto;
-    padding-top: 34px;
-    padding-bottom: 30px;
-    padding-left: 4px;
-    padding-right: 8px;
-    max-width: 484px;
+  font-family: "PT SansBold";
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 30px;
+  padding-left: 4px;
+  padding-right: 8px;
+  max-width: 484px;
 }
 
 .advantages__text {
-    text-align: center;
-    margin: 0 auto;
-    line-height: 26px;
-    padding-bottom: 18px;
-    padding-right: 18px;
-    padding-left: 18px;
-    padding-top: 1px;
-    max-width: 520px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 26px;
+  padding-bottom: 18px;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 1px;
+  max-width: 520px;
 }
 
 .advantages__overlay {
-    margin-top: -23px;
+  margin-top: -23px;
 }
 
 .advantages__description {
-    position: relative;
-    bottom: 2px;
-    left: -3px;
-    font-size: 14px;
-    line-height: 21px;
-    padding-left: 5px;
+  position: relative;
+  bottom: 2px;
+  left: -3px;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 5px;
 
 }
 
 .advantages__description p {
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0px;
-    text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .advantages__item--home::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 260px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    grid-column: span 2;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  grid-column: span 2;
 }
 
 .advantages__item--home:nth-of-type(1)::after {
-    background-image: url("../img/home.jpg");
+  background-image: url("../img/home.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
-    .advantages__item--home:nth-of-type(1)::after {
-        background-image: url("../img/home@2x.jpg");
-    }
+  .advantages__item--home:nth-of-type(1)::after {
+    background-image: url("../img/home@2x.jpg");
+  }
 }
 
 .advantages__item--bridge::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 260px;
-    margin-bottom: 27px;
-    margin-top: -13px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    grid-column: span 2;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 260px;
+  margin-bottom: 27px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  grid-column: span 2;
 }
 
 .advantages__item--bridge::after {
-    background-image: url("../img/photo-bridge-desktop.jpg");
+  background-image: url("../img/photo-bridge@1x.jpg");
 }
 
 .advantages__item--bridge::after {
-    background-image: url("../img/photo-bridge-desktop@2x.jpg");
+  background-image: url("../img/photo-bridge@2x.jpg");
 }
 
 .advantages__title {
-    position: static;
-    font-family: "PT SansBold";
-    font-size: 18px;
-    padding-top: 12px;
-    line-height: 26px;
+  position: static;
+  font-family: "PT SansBold";
+  font-size: 18px;
+  padding-top: 12px;
+  line-height: 26px;
 }
 
 .advantages__number {
-    position: relative;
-    top: -5px;
-    font-size: 14px;
-    line-height: 21px;
+  position: relative;
+  top: -9px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .advantages__bridge {
-    padding-top: 27px;
+  padding-top: 26px;
 }
 
 .advantages__item--fon:nth-of-type(1)::after {
-    background-image: url("../img/photo-bridge-desktop.jpg");
+  background-image: url("../img/photo-bridge@1x.jpg");
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
-    .advantages__item--fon:nth-of-type(1)::after {
-        background-image: url("../img/photo-bridge-desktop@2x.jpg");
-    }
+  .advantages__item--fon:nth-of-type(1)::after {
+    background-image: url("../img/photo-bridge@2x.jpg");
+  }
+}
+
+.advantages-wrapper--bridge {
+  margin-top: -27px;
+  padding-bottom: 12px;
+  height: 191px;
 }
 
 .advantages-wrapper--bridge p {
-    padding-bottom: 11px;
-    margin-top: -6px;
+  padding-bottom: 11px;
+  margin-top: -6px;
 }
 
 .advantages-wrapper--bridge h3 {
-    margin-top: 28px;
+  padding-top: 40px;
+  margin-top: 28px;
 }
 
 .advantages__item {
-    text-align: center;
-    border-bottom: 1px solid #D6D6D6;
+  text-align: center;
 }
 
-.advantages__item:last-child {
-    border: none;
+.advantages__item {
+  position: relative;
+
+}
+
+.city-advantages__privilege {
+  margin-bottom: -26px;
+}
+
+.advantages__item--numbers::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  /* Отступ слева */
+  right: 20px;
+  /* Отступ справа */
+  height: 1px;
+  background-color: #d6d6d6;
+}
+
+.advantages__item--numbers:last-child {
+  border: none;
 }
 
 .advantages__item--numbers {
-    height: 167px;
-    padding: 0px 32px;
+  height: 167px;
+  padding: 1px 32px;
+
 }
 
 .advantages__title--numbers {
-    font-family: "PT SansBold";
-    font-size: 18px;
-    margin-top: 28px;
-    margin-bottom: 13px;
+  font-family: "PT SansBold";
+  font-size: 18px;
+  padding-top: 10px;
 }
 
-.advantages__number--numbers {
-    margin-top: -14px;
-}
+.advantages__number--numbers {}
 
 .advantages__description--numbers {
-    line-height: 21px;
-    padding-bottom: 12px;
-    margin-top: -10px;
+  line-height: 21px;
 }

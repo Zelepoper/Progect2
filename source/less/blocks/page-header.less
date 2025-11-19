@@ -1,24 +1,28 @@
 .page-header__main-image {
-    position: relative;
-    height: 299px;
-    background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 100%;
-    background-size: 1200px 57px, cover;
-    text-align: center;
+  position: relative;
+  height: 389px;
+  background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-size: 1200px 57px, cover;
+  text-align: center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
-    .page-header__main-image {
-        background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile@2x.jpg");
-    }
-}
- @media (-webkit-min-device-pixel-ratio: 3),
-(min-resolution: 3dppx) {
-    .page-header__main-image {
-        background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile@3x.jpg");
-    }   
+  .page-header__main-image {
+    background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile@2x.jpg");
+  }
 }
 
+@media (-webkit-min-device-pixel-ratio: 3),
+(min-resolution: 3dppx) {
+  .page-header__main-image {
+    background-image: url("../img/background-header/intro-triangle.svg"), url("../img/background-header/back-mobile@3x.jpg");
+  }
+}
+
+.page-header__welcome-title {
+  padding-top: 90px;
+}
