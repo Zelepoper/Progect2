@@ -5,7 +5,7 @@
   height: 84px;
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 5;
+  z-index: 4;
   margin-bottom: -26px;
   /* Фон для мобильных устройств */
   --logo-mobile: url("../img/logotype/logotype-mobile.png");
@@ -26,6 +26,8 @@
   background-image: var(--logo-mobile);
 }
 
+
+
 /* Retina для мобильных */
 @media (min-resolution: 2dppx) {
   .page--header__logo {
@@ -42,7 +44,12 @@
 /* Планшеты */
 @media (min-width: 768px) {
   .page--header__logo {
+    position: absolute;
+    z-index: 2;
     background-image: var(--logo-tablet);
+    margin-top: -92px;
+    margin-left: 0px;
+
   }
 
   @media (min-resolution: 2dppx) {
@@ -62,6 +69,10 @@
 @media (min-width: 1200px) {
   .page--header__logo {
     background-image: var(--logo-desktop);
+    margin-top: -79px;
+    margin-left: 4px;
+    width: 186.6px;
+    height: 96.43px;
   }
 
   @media (min-resolution: 2dppx) {

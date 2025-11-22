@@ -1,15 +1,26 @@
 .main-nav__wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
   margin: -14px 0px -11px;
   padding: 0px;
-  background-color: var(--basic-blue);
   color: #ffffff;
   text-align: center;
   position: relative;
   z-index: 1;
-
 }
 
-@media (min-wigth: @mobile-width-only) {
+@media (min-width: @tablet-width) {
+
+  .main-nav__wrapper {
+    display: flex;
+    background-color: #ffffff;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (min-width: @mobile-width-only) {
   .main-nav__wrapper::after {
     content: "";
     position: absolute;
@@ -21,15 +32,18 @@
   }
 }
 
-.main-nav__list {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 768px;
-
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper::after {
+    display: none;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper::after {
+    display: none;
+  }
+}
+
 
 .main-nav__panel {
   height: 56px;
@@ -38,15 +52,23 @@
   align-items: center;
   justify-items: center;
   position: relative;
-  z-index: 3;
   background-color: #ffffff;
 }
 
-@media (min-wight: @mobile-width-only) {
+@media (max-width: @mobile-width-only) {
   .main-nav__panel {
-    z-index: 2;
+    z-index: 1;
   }
 }
+
+@media (min-width: @tablet-width) {
+
+  .main-nav__panel {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+}
+
 
 /* Стили для гамбургер-меню (три линии) */
 .main-nav__toggle {
@@ -59,6 +81,13 @@
   border: none;
   cursor: pointer;
 
+}
+
+@media (min-width: @tablet-width) {
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__toggle::before,
@@ -108,34 +137,23 @@
 }
 
 /* Скрываем меню по умолчанию */
-.main-nav__wrapper {
-  display: none;
-  /* Дополнительные стили, если нужны */
-}
 
 /* Показываем меню, когда класс .main-nav--opened добавлен */
 .main-nav--opened .main-nav__wrapper {
-  display: block;
+  max-height: 1000px;
 }
 
-@media (min-width:767px) {
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__wrapper {
-    display: flex;
-  }
+@media (min-width: @tablet-width) {
 
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 768px;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
     margin: 0 auto;
-    padding: 0;
-    background-color: var(--basic-blue);
-    color: #ffffff;
   }
 }
+
