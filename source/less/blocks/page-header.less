@@ -7,7 +7,7 @@
   background-position-y: 100%;
   background-size: 1200px 57px, cover;
   text-align: center;
-  }
+}
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
@@ -28,7 +28,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header__welcome-title {
+    width: 461px;
+    padding-top: 77px;
+    margin-left: -2px;
+  }
+}
 
+@media (min-width: @desktop-width) {
+  .page-header__welcome-title {
+    width: 459.5px;
+    margin-left: 1px;
+    padding-top: 79px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
   .page-header__main-image {
     position: relative;
     height: 518px;
@@ -40,7 +56,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header__main-image {
-    background-image: url("../img/background-header/intro-triangle.svg"), url("../img/back-desktop.jpg");
+    background-image: url("../img/background-header/intro-triangle-desk.svg"), url("../img/back-desktop.jpg");
   }
 }
 
@@ -57,6 +73,3 @@
     background-image: url("../img/background-header/intro-triangle.svg"), url("../img/back-desktop@3x.jpg");
   }
 }
-
-
-

@@ -5,11 +5,33 @@
   margin-top: 35px;
 }
 
+@media (min-width: @tablet-width) {
+  .city-advantages {
+    display: flex;
+    padding: 0px;
+    height: 330px;
+    left: 0px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .city-advantages__lists {
+    padding-left: 0px;
+  }
+}
 
 .city-advantages__items {
   margin-bottom: -16px;
   position: relative;
 }
+
+@media (min-width: @tablet-width) {
+  .city-advantages__items {
+    margin-left: 0px;
+  }
+}
+
 
 .city-advantages__items::before {
   content: "";
@@ -27,6 +49,27 @@
   background-image: url("../img/icons/icon-house.svg");
 }
 
+@media (min-width: @tablet-width) {
+  .city-advantages__item--lodging {
+    order: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .city-advantages__item--lodging::before {
+    width: 75px;
+    height: 72px;
+    left: 90px;
+    top: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .city-advantages__item--lodging::before {
+    left: 161px;
+  }
+}
+
 .city-advantages__item--souvenir::before {
   width: 32px;
   height: 38px;
@@ -35,14 +78,56 @@
   background-image: url("../img/icons/icon-gift.svg");
 }
 
+@media (min-width: @tablet-width) {
+  .city-advantages__item--souvenir {
+    order: 3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .city-advantages__item--souvenir::before {
+    width: 64px;
+    height: 75px;
+    left: 74px;
+    top: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .city-advantages__item--souvenir::before {
+    left: 138px;
+  }
+}
+
 .city-advantages__item--food::before {
-  width: 40px;
-  height: 34.9px;
+  width: 39px;
+  height: 36.83px;
   left: -51px;
   top: -5px;
   background-image: url("../img/icons/icon-burger.svg");
 }
 
+@media (min-width: @tablet-width) {
+  .city-advantages__item--food {
+    order: 2;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .city-advantages__item--food::before {
+    width: 76px;
+    height: 67.9px;
+    left: 83px;
+    top: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .city-advantages__item--food::before {
+    left: 153px;
+  }
+}
 
 .city-advantages__title {
   font-family: "PT SansBold";
@@ -52,22 +137,67 @@
   margin-bottom: 27px;
 }
 
-.city-advantages__text {
-  position: relative;
-  font-size: 14px;
-  line-height: 21px;
-  color: #333333;
-  bottom: 10px;
-  left: 1px;
-  padding-right: 90px;
+@media (min-width: @tablet-width) {
+  .city-advantages__title {
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 160px;
+    margin-bottom: 31px;
+    margin-left: -19px;
+    text-align: center;
+  }
 }
 
-@media (min-width: 411px) {
-  .city-advantages__text {
-      padding-right: 150px;
+@media (min-width: @desktop-width) {
+  .city-advantages__title {
+    margin-left: -31px;
   }
 
-  .city-advantages__items {
-    margin-left: 38px;
+  .city-advantages__text {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    bottom: 10px;
+    left: 1px;
+    padding-right: 90px;
+  }
+
+  @media (min-width: 411px) {
+    .city-advantages__text {
+      padding-right: 150px;
+    }
+
+    @media (min-width: @tablet-width) {
+      .city-advantages__text {
+        padding-right: 0px;
+        margin-right: 30px;
+        margin-left: 11px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .city-advantages__items {
+      height: 253px;
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .city-advantages__text {
+      margin-right: 74px;
+      margin-left: 60px;
+    }
+  }
+
+
+  @media (min-width: @desktop-width) {
+    .city-advantages__items {
+      height: 253px;
+      margin-left: 0px;
+      text-align: center;
+    }
   }
 }
