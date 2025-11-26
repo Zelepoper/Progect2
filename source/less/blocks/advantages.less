@@ -195,7 +195,7 @@
   height: 260px;
   margin-bottom: 27px;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-size: cover;
   grid-column: span 2;
 }
@@ -208,6 +208,8 @@
   background-image: url("../img/photo-bridge@2x.jpg");
 }
 
+
+
 @media (min-width: @tablet-width) {
   .advantages__item--bridge {
     flex-direction: row-reverse;
@@ -216,6 +218,22 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__bridge {
+    padding-top: 25px;
+  }
+
+.advantages__item--bridge :nth-of-type(1)::after {
+  background-image: url("../img/photo-bridge-desktop.jpg");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  .advantages__item--bridge:nth-of-type(1)::after {
+    background-image: url("../img/photo-bridge-desktop@2x.jpg");
+  }
+}
+}
 
 .advantages__title {
   position: static;
@@ -256,23 +274,6 @@
   padding-top: 68px;
 }
 
-@media (min-width: @tablet-width) {
-  .advantages__bridge {
-    padding-top: 25px;
-  }
-}
-
-
-.advantages__item--fon:nth-of-type(1)::after {
-  background-image: url("../img/photo-bridge@1x.jpg");
-}
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 2dppx) {
-  .advantages__item--fon:nth-of-type(1)::after {
-    background-image: url("../img/photo-bridge@2x.jpg");
-  }
-}
 
 .advantages-wrapper--bridge {
   margin-top: -76px;
